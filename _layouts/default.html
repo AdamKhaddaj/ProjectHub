@@ -13,26 +13,30 @@
     {% include head-custom.html %}
 
     <style>
-  div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.gallery-item {
+    flex: 1 0 30%; /* 1: grow, 0: shrink, 30%: basis */
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center; /* Center align text */
+}
+
+.gallery-item img {
     width: 100%;
     height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
+    display: block;
+}
+
+.description {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
   </style>
   </head>
   
@@ -50,30 +54,20 @@
       <header>
         <h1 style="font-size:32px">Projects</h1>
       </header>
-      <div class="gallery">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="Images/scribblerabbit.PNG" alt="Image" width="500" height="500">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div>
-  <a target="_blank" href="img_forest.jpg">
-    <img src="Images/bunnyVineGrowth.png" alt="Image" width="500" height="500">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-  <a target="_blank" href="img_lights.jpg">
-    <img src="Images/dracul.PNG" alt="Image" width="500" height="500">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="Images/dracul.PNG" alt="Image" width="500" height="500">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Images/dracul.PNG" alt="Image" width="500" height="500">
+            <div class="description">Description for Image 1</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/bunnyVineGrowth.png" alt="Image" width="500" height="500">
+            <div class="description">Description for Image 2</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/scribblerabbit.PNG" alt="Image" width="500" height="500">
+            <div class="description">Description for Image 3</div>
+    </div>
+      
     </main>
 
 
