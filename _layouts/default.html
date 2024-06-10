@@ -13,9 +13,19 @@
     {% include head-custom.html %}
 
     <style>
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure container takes full width */
+    padding: 20px; /* Optional: add some padding around the gallery */
+    box-sizing: border-box;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px; /* Set a max-width for the gallery */
     margin: -10px;
 }
 
@@ -27,9 +37,11 @@
 }
 
 .gallery-item img {
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
     height: auto;
     display: block;
+    padding: 10px; /* Add padding around the image */
+    box-sizing: border-box; /* Ensure padding is included in the width and height */
 }
 
 .description {
@@ -54,19 +66,21 @@
       <header>
         <h1 style="font-size:32px">Projects</h1>
       </header>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="Images/dracul.PNG" alt="Image" width="500" height="500">
-            <div class="description">Description for Image 1</div>
-        </div>
-        <div class="gallery-item">
-            <img src="Images/bunnyVineGrowth.png" alt="Image" width="500" height="500">
-            <div class="description">Description for Image 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="Images/scribblerabbit.PNG" alt="Image" width="500" height="500">
-            <div class="description">Description for Image 3</div>
-    </div>
+    <div class="gallery-container">
+      <div class="gallery">
+          <div class="gallery-item">
+              <img src="Images/dracul.PNG" alt="Image" width="500" height="500">
+              <div class="description">Description for Image 1</div>
+          </div>
+          <div class="gallery-item">
+              <img src="Images/bunnyVineGrowth.png" alt="Image" width="500" height="500">
+              <div class="description">Description for Image 2</div>
+          </div>
+          <div class="gallery-item">
+              <img src="Images/scribblerabbit.PNG" alt="Image" width="500" height="500">
+              <div class="description">Description for Image 3</div>
+      </div>
+      </div>
       
     </main>
 
