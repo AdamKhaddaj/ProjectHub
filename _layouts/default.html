@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     width: 100%; /* Ensure container takes full width */
-    padding: 20px; /* Optional: add some padding around the gallery */
+    padding: 15px; /* Optional: add some padding around the gallery */
     box-sizing: border-box;
 }
 
@@ -25,7 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px; /* Set a max-width for the gallery */
+    max-width: 1600px; /* Set a max-width for the gallery */
     margin: -10px;
 }
 
@@ -61,17 +61,23 @@
     <div class="gallery-container">
       <div class="gallery">
           <div class="gallery-item">
-              <img src="Images/draculabetter.PNG" alt="Image" width="300" height="300">
-              <div class="description">Description for Image 1</div>
+            <a href="https://adamkhaddaj.github.io/Unity-RTS-Game-Demo-Dracula/">
+              <img src="Images/draculabetter.PNG" alt="Image" width="400" height="400">
+            </a>
+              <div id="content" class="main-content" role="main" style="padding-top:10px"><a href="https://adamkhaddaj.github.io/Unity-RTS-Game-Demo-Dracula/">Dracula</a>, a prototype Real-Time Strategy game developed in Unity that implements several core systems such as hierachical state-based AI, code architecture for many independant game agents, and more</div>
           </div>
           <div class="gallery-item">
-              <img src="Images/bunnyVineGrowth.png" alt="Image" width="300" height="300">
-              <div class="description">Description for Image 2</div>
+            <a href="https://adamkhaddaj.github.io/Space-Colonization-Vines/">
+              <img src="Images/scribblerabbit.PNG" alt="Image" width="400" height="400">
+            </a>
+              <div id="content" class="main-content" role="main" style="padding-top:10px">A <a href="https://adamkhaddaj.github.io/Space-Colonization-Vines/">2D vine growth generator and renderer</a> that stores the traversal of vines growths in UV space using a Space Colonization algorithm, rendering them in real-time </div>
           </div>
           <div class="gallery-item">
-              <img src="Images/scribblerabbit.PNG" alt="Image" width="300" height="300">
-              <div class="description">Description for Image 3</div>
-      </div>
+            <a href="https://adamkhaddaj.github.io/ScribbleRendering/">
+              <img src="Images/bunnyVineGrowth.png" alt="Image" width="400" height="400">
+            </a>
+              <div id="content" class="main-content" role="main" style="padding-top:10px">Rendering project that replaces the standard lighting model with a <a href="https://adamkhaddaj.github.io/ScribbleRendering/">highly stylized cross-hatching effect</a> using Tonal Art Maps</div>
+          </div>
       </div>
       
     </main>
